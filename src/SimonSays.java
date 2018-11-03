@@ -149,6 +149,6 @@ else {
  *
  * ~~~ where the code ends ~~~ 
  * Date timeAtEnd = new Date();
- * System.out.println((timeAtEnd.getTime()-timeAtStart.getTime())/1000);
+ System.out.println((timeAtEnd.getTime()-timeAtStart.getTime())/1000);
  * System.exit(0);
  */
