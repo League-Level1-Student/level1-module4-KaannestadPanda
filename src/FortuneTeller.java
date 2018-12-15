@@ -54,15 +54,15 @@ System.out.println(" "+mouseY);
    	 /** If the mouse co-ordinates and secret location are close, we'll let them ask a question. */
    	 if (areClose(mouseX, secretLocationX) && areClose(mouseY, secretLocationY)) {
    		 // 8. Get the user to enter a question for the fortune teller
-
+JOptionPane.showInputDialog("Ask a question ya dingus");
    		 // 9. Find a spooky sound and put it in your default package (freesound.org)
-   		 // AudioClip sound = JApplet.newAudioClip(getClass().getResource("creepy-noise.wav"));
+   		 AudioClip sound = JApplet.newAudioClip(getClass().getResource("creepy-noise.wav"));
    		 // 10. Play the sound
-
+sound.play();
    		 // 11. Use the pause() method below to wait until your music has finished
-
+pause(4);
    		 // 12. Insert your completed Magic 8 ball recipe (http://bit.ly/Zdrf6d) here
-
+JOptionPane.showInputDialog("Yes, definitely or somerhting i  dont tatjreally nknowssbecaus de fjfjsid i had ot oskip the magiv heaight ball methodif do sasy i don tknow the answer");
    	 }
 
     }
