@@ -28,11 +28,12 @@ public class LatestTweet implements ActionListener {
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
 		frame.add(panel);
-		JButton button=new JButton();
+		JButton button=new JButton("ehehehehhehehehehehehhe");
 		
 		button.addActionListener(this);
 		panel.add(text);
 		panel.add(button);
+		frame.setTitle("yeate");
 		frame.pack();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
@@ -41,7 +42,9 @@ public class LatestTweet implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		System.out.println("Tweet, Tweet");
-		getLatestTweet(text.getText());
+		System.out.println(
+				getLatestTweet(text.getText())
+	);
 	}
 	
 	
