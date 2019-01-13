@@ -1,9 +1,39 @@
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class PigLatinTranslator {
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
+public class PigLatinTranslator implements ActionListener {
+Dimension d = new Dimension(200,25);
+Dimension c = new Dimension(800,25);
+JTextField inputField;
+JTextField outputField;
 	public static void main(String[] args) {
 		
-		System.out.println(translate("Hahaha youre a default ya noob"));
+		PigLatinTranslator a= new PigLatinTranslator();
+		a.makeUI();
+	}
+	
+	void makeUI() {
+		JFrame frame = new JFrame();
+		JPanel panel = new JPanel();
+		inputField = new JTextField();
+		inputField.setPreferredSize(d);
+		JButton button = new JButton("translate");
+		button.addActionListener(this);
+		outputField = new JTextField();
+		outputField.setPreferredSize(c);
+		frame.add(panel);
+		panel.add(inputField);
+		panel.add(button);
+		panel.add(outputField);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.pack();
+		frame.setVisible(true);
 	}
 	/**
      * Method to test whether a character is a letter or not.
@@ -69,6 +99,13 @@ public class PigLatinTranslator {
                     return i;
                return 0;
      }
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		String answer = translate(inputField.getText());
+		outputField.setText(answer);
+	}
 	
 	
 }
