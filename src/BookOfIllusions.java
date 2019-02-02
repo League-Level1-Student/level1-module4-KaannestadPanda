@@ -80,6 +80,8 @@ JLabel label2;
 		Icon icon = new ImageIcon(imageURL);
 		return new JLabel(icon);
 	}
+	
+	
 
 }
 
